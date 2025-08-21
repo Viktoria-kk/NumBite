@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NumBite</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main class="home-container">
+      <div class="welcome-desc">
+        <p>Craving a quick snack of trivia? You're in the right place. 🍪</p>
+
+        <p>
+          Here at NumBite, every number has a story — whether it's your
+          birthdate, a random digit, or today’s date. We fetch fascinating, fun,
+          and sometimes downright weird facts about numbers from the Numbers
+          API, just for you.
+        </p>
+
+        <p>
+          🔢 Enter a number, click a button, and get a tasty bite of
+          knowledge.<br />🎲 Feeling spontaneous? Try a random number and see
+          where it takes you.
+        </p>
+
+        <p>
+          Go ahead — explore the hidden side of numbers.<br />Because at
+          NumBite, <strong>every digit counts.</strong>
+        </p>
+      </div>
+      <div class="fact-options">
+        <form action="/number" method="get">
+          <button type="submit" class="btn">Number Fact</button>
+        </form>
+        <form action="/date" method="get">
+          <button type="submit" class="btn">Date Fact</button>
+        </form>
+        <form action="/year" method="get">
+          <button type="submit" class="btn">Year Fact</button>
+        </form>
+        <form action="/math" method="get">
+          <button type="submit" class="btn">Math Fact</button>
+        </form>
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

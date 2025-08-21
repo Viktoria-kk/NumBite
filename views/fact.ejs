@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <title>Fact</title>
+  </head>
+  <body>
+    <%- include("partials/header") %>
+
+    <main class="fact-container">
+      <div class="fact-card">
+        <h2><%= type.charAt(0).toUpperCase() + type.slice(1) %> Fact</h2>
+
+        <% if (!fact) { %>
+        <form action="/fact/<%= type %>" method="POST" class="fact-form">
+          <% if (type === 'date') { %>
+          <input
+            type="text"
+            name="inputValue"
+            placeholder="Enter date MM/DD"
+            required
+          />
+          <% } else { %>
+          <input
+            type="number"
+            name="inputValue"
+            placeholder="Enter a <%= type %>"
+            required
+          />
+          <% } %>
+          <button type="submit" class="btn">Get Fact</button>
+        </form>
+
+        <form
+          action="/fact/<%= type %>/random"
+          method="GET"
+          class="random-form"
+        >
+          <button type="submit" class="random-btn btn">Random Fact</button>
+        </form>
+        <% } else { %>
+        <p class="fact-result">Here's your <%= type %> fact:</p>
+        <p class="fact-text"><%= fact %></p>
+
+        <div class="fact-actions">
+          <a href="/<%= type %>" class="btn">Get New Fact</a>
+
+          <form action="/" method="GET">
+            <button type="submit" class="btn">Change Fact Type</button>
+          </form>
+        </div>
+        <% } %>
+      </div>
+    </main>
+
+    <%- include("partials/footer") %>
+  </body>
+</html>

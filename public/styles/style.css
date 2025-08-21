@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Belleza&family=DM+Serif+Text:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  --pink-light: #ffd6e8;
+  --pink: #ff5c8a;
+  --pink-dark: #e63968;
+  --bg: #fff0f5;
+  --text: #2a2a2a;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(230, 57, 104, 0.2);
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  margin: 30px;
+}
+.logo {
+  font-family: "Josefin Sans", cursive;
+  font-size: 64px;
+  color: var(--pink-dark);
+  text-shadow: 2px 2px var(--pink-light);
+  margin: 50px;
+  text-align: center;
+}
+
+.fact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.fact-card {
+  background: var(--card-bg);
+  box-shadow: 0 5px 15px var(--card-shadow);
+  padding: 40px;
+  border-radius: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+.fact-card h2 {
+  font-family: "Josefin Sans", cursive;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: var(--pink-dark);
+}
+
+.fact-form,
+.random-form {
+  margin-bottom: 20px;
+}
+.fact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.fact-form input {
+  padding: 12px 16px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: 2px solid var(--pink);
+  width: 70%;
+  margin-bottom: 12px;
+}
+
+.fact-form button,
+.random-form button {
+  padding: 12px 25px;
+  background: var(--pink-dark);
+  border: none;
+  color: white;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fact-form button:hover,
+.random-form button:hover {
+  background: var(--pink-light);
+  color: var(--pink-dark);
+}
+
+.fact-result {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--pink-dark);
+}
+
+.fact-text {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: var(--pink-dark);
+}
+a {
+  text-decoration: none;
+}
+.home-container {
+  width: 800px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.welcome-desc {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--pink-dark);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.fact-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.btn {
+  background: var(--pink);
+  border: none;
+  padding: 12px 30px;
+  margin: 0 10px;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  color: white;
+}
+form {
+  display: inline-block;
+}
+.btn:hover {
+  background: var(--pink-light);
+  color: var(--pink-dark);
+}
+
+footer {
+  color: var(--pink-dark);
+  font-family: "Josefin Sans", cursive;
+  font-size: 16px;
+  margin: 30px 0;
+  text-align: center;
+}
